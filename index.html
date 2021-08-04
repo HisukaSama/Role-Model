@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Test</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <h1>Testing</h1>
+    <div class="container">
+        <div class="login-form" id="login-form">
+             <form action="">
+                <div class="title">
+                    <h2>Login Form</h2>
+                 </div>
+                 <div class="input">
+                     <ul>
+                     <label for="email" >Email:</label>
+                     <li><input type="email" id = "email" class="email" required>
+                     </li>                    
+                        <br><br>
+                     <label for="password" >Password:</label>
+                     <li><input type="password" id="password" class="password" required></li>
+                    </ul> 
+                    <br><br>
+                    <div class="button-div">
+                        <input type="submit" value="Login" class="submit-button">
+                        <input type="button" value="Logout" class="Logout" id="logout"> 
+                       </div>  
+                                       
+                </div>
+                 <br><br>
+                 
+                 <br><br>
+                 <p class="content"> </p>
+                 
+                 <p class="userContent">USER CONTENT 1 </p>
+                 <p class="userContent">USER CONTENT 2 </p>
+
+                 <p class="managerContent">MANAGER ONLY CONTENT1</p>
+                 <p class="managerContent">MANAGER ONLY CONTENT2 </p>
+                 <p></p>
+             </form>
+
+        </div>
+    </div>
+
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBykqGXTfbdWNrveCBYC3K3OArfaywJ8QE",
+    authDomain: "rolemodel-b07e2.firebaseapp.com",
+    projectId: "rolemodel-b07e2",
+    storageBucket: "rolemodel-b07e2.appspot.com",
+    messagingSenderId: "587872384438",
+    appId: "1:587872384438:web:7adcd1f225508b080c3d17"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  //refrencing auth and firerstore
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+
+
+</script>
+<script src="auth.js"></script>
+<script src="sandbox.js"></script>
+ 
+
+    
+</body>
+</html>
